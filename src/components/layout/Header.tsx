@@ -1,0 +1,112 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Code2, Menu, Sparkles, X } from "lucide-react";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/cn";
+import { navItems, profile } from "@/lib/data";
+
+export function Header({
+  activeSection,
+  onNavigateSection
+}: {
+  activeSection: string;
+  onNavigateSection: (sectionId: string) => void;
+}) {
+  const [open, setOpen] = useState(false);
+
+  const handleNavClick = (sectionId: string) => {
+    onNavigateSection(sectionId);
+    setOpen(false);
+  };
+
+  return (
+    <header className="sticky top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4">
+      <div className="container">
+        <div className="glass-panel flex items-center justify-between rounded-full px-3 py-2 sm:px-4">
+          <button
+            onClick={() => handleNavClick("top")}
+            className="flex items-center gap-3 rounded-full px-2 py-1.5 text-left transition hover:bg-secondary/80"
+          >
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <Code2 className="h-5 w-5" />
+            </span>
+            <span className="hidden min-[440px]:block">
+              <span className="block text-sm font-semibold text-foreground">{profile.name}</span>
+              <span className="block text-xs text-muted-foreground">{profile.role}</span>
+            </span>
+          </button>
+
+          <nav className="hidden items-center gap-1 lg:flex">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => handleNavClick(item.id)}
+                className={cn(
+                  "rounded-full px-4 py-2 text-sm font-medium transition",
+                  activeSection === item.id
+                    ? "bg-primary text-primary-foreground shadow-glow"
+                    : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+                )}
+              >
+                {item.label}
+              </button>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-2">
+            <div className="hidden items-center gap-2 sm:flex">
+              <ThemeToggle />
+              <Button variant="secondary" onClick={() => handleNavClick("contact")} className="rounded-full">
+                <Sparkles className="h-4 w-4" />
+                Let's Talk
+              </Button>
+            </div>
+            <button
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background/60 lg:hidden"
+              onClick={() => setOpen((current) => !current)}
+              aria-label="Toggle navigation"
+            >
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
+        </div>
+
+        <AnimatePresence>
+          {open ? (
+            <motion.div
+              initial={{ opacity: 0, y: -12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.22 }}
+              className="glass-panel mt-3 rounded-[2rem] p-3 lg:hidden"
+            >
+              <div className="flex flex-col gap-2">
+                {navItems.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => handleNavClick(item.id)}
+                    className={cn(
+                      "rounded-2xl px-4 py-3 text-left text-sm font-medium transition",
+                      activeSection === item.id
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-background/60 text-muted-foreground hover:text-foreground"
+                    )}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+                <div className="mt-1 flex items-center justify-between rounded-2xl bg-background/60 px-3 py-2">
+                  <ThemeToggle />
+                  <Button variant="secondary" onClick={() => handleNavClick("contact")}>
+                    Let's Talk
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
+      </div>
+    </header>
+  );
+}
