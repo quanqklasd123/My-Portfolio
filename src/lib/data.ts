@@ -37,7 +37,28 @@ export type TimelineItem = {
   highlights: string[];
 };
 
-export const profile = {
+export type Profile = {
+  name: string;
+  role: string;
+  location: string;
+  intro: string;
+  bio: string;
+  goals: string;
+  strengths: string[];
+};
+
+export type HeroStat = {
+  value: string;
+  label: string;
+};
+
+export type ContactLink = {
+  label: string;
+  value: string;
+  href: string;
+};
+
+export const profile: Profile = {
   name: "Tran Van Quân",
   role: "Full-stack Developer Intern",
   location: "Ho Chi Minh City, Vietnam",
@@ -62,7 +83,7 @@ export const navItems: NavItem[] = [
   { id: "contact", label: "Contact" }
 ];
 
-export const heroStats = [
+export const heroStats: HeroStat[] = [
   { value: "4+", label: "Production-style projects" },
   { value: "3", label: "Primary backend ecosystems" },
   { value: "100%", label: "Responsive-first mindset" }
@@ -73,27 +94,27 @@ export const skillCategories: SkillCategory[] = [
     title: "Frontend",
     description: "Interfaces that feel clean, responsive, and conversion-aware.",
     items: [
-      { name: "React", level: 92 },
-      { name: "Tailwind CSS", level: 90 },
-      { name: "JavaScript / TypeScript", level: 88 }
+      { name: "React", level: 80 },
+      { name: "Tailwind CSS", level: 78 },
+      { name: "JavaScript / TypeScript", level: 76 }
     ]
   },
   {
     title: "Backend",
     description: "API and service work focused on maintainability and practical scaling.",
     items: [
-      { name: "Java Spring Boot", level: 87 },
-      { name: "C# / .NET", level: 80 },
-      { name: "Node.js", level: 78 }
+      { name: "Java Spring Boot", level: 77 },
+      { name: "C# / .NET", level: 75 },
+      { name: "Node.js", level: 74 }
     ]
   },
   {
     title: "Tools",
     description: "Daily workflow tools for shipping faster and collaborating better.",
     items: [
-      { name: "Git", level: 90 },
-      { name: "GitHub", level: 88 },
-      { name: "VS Code", level: 93 }
+      { name: "Git", level: 79 },
+      { name: "GitHub", level: 77 },
+      { name: "VS Code", level: 80 }
     ]
   }
 ];
@@ -223,7 +244,7 @@ export const timeline: TimelineItem[] = [
   }
 ];
 
-export const contactLinks = [
+export const contactLinks: ContactLink[] = [
   {
     label: "Email",
     value: "hello@minhanh.dev",

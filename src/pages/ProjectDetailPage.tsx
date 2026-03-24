@@ -4,13 +4,18 @@ import { useParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { projects } from "@/lib/data";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getPortfolioData, getUiText } from "@/lib/i18n";
 
 export default function ProjectDetailPage({
   onNavigateSection
 }: {
   onNavigateSection: (sectionId: string) => void;
 }) {
+  const { language } = useLanguage();
+  const { projects } = getPortfolioData(language);
+  const ui = getUiText(language);
+
   const { slug } = useParams();
   const project = projects.find((item) => item.slug === slug);
 
@@ -19,10 +24,10 @@ export default function ProjectDetailPage({
       <main className="container py-32">
         <Card>
           <CardContent className="p-8">
-            <p className="text-lg font-semibold">Project not found.</p>
-            <p className="mt-2 text-muted-foreground">The case study you are looking for does not exist.</p>
+            <p className="text-lg font-semibold">{ui.projectNotFoundTitle}</p>
+            <p className="mt-2 text-muted-foreground">{ui.projectNotFoundDescription}</p>
             <Button className="mt-6" onClick={() => onNavigateSection("projects")}>
-              Back to Projects
+              {ui.backToProjects}
             </Button>
           </CardContent>
         </Card>
@@ -41,7 +46,7 @@ export default function ProjectDetailPage({
       <div className="container">
         <Button variant="ghost" onClick={() => onNavigateSection("projects")} className="mb-8">
           <ArrowLeft className="h-4 w-4" />
-          Back to Projects
+          {ui.backToProjects}
         </Button>
 
         <section className="glass-panel overflow-hidden rounded-[2.5rem]">
@@ -55,13 +60,13 @@ export default function ProjectDetailPage({
               <Button asChild>
                 <a href={project.demoUrl} target="_blank" rel="noreferrer">
                   <ArrowUpRight className="h-4 w-4" />
-                  Live Demo
+                  {ui.liveDemo}
                 </a>
               </Button>
               <Button variant="secondary" asChild>
                 <a href={project.githubUrl} target="_blank" rel="noreferrer">
                   <Github className="h-4 w-4" />
-                  GitHub Repository
+                  GitHub
                 </a>
               </Button>
             </div>
@@ -70,19 +75,19 @@ export default function ProjectDetailPage({
           <div className="grid gap-6 p-6 sm:p-10 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="space-y-8">
               <section>
-                <h2 className="text-xl font-semibold">Project overview</h2>
+                <h2 className="text-xl font-semibold">{ui.detailOverview}</h2>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">{project.description}</p>
               </section>
               <section>
-                <h2 className="text-xl font-semibold">Challenge</h2>
+                <h2 className="text-xl font-semibold">{ui.detailChallenge}</h2>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">{project.challenge}</p>
               </section>
               <section>
-                <h2 className="text-xl font-semibold">Solution</h2>
+                <h2 className="text-xl font-semibold">{ui.detailSolution}</h2>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">{project.solution}</p>
               </section>
               <section>
-                <h2 className="text-xl font-semibold">Outcome</h2>
+                <h2 className="text-xl font-semibold">{ui.detailOutcome}</h2>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">{project.outcome}</p>
               </section>
             </div>
@@ -90,7 +95,7 @@ export default function ProjectDetailPage({
             <div className="space-y-6">
               <Card>
                 <CardContent className="p-6">
-                  <p className="text-sm font-semibold text-foreground">Tech stack</p>
+                  <p className="text-sm font-semibold text-foreground">{ui.detailTechStack}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {project.stack.map((item) => (
                       <Badge key={item} className="bg-background/80 text-foreground">
@@ -102,7 +107,7 @@ export default function ProjectDetailPage({
               </Card>
               <Card>
                 <CardContent className="p-6">
-                  <p className="text-sm font-semibold text-foreground">Key highlights</p>
+                  <p className="text-sm font-semibold text-foreground">{ui.detailHighlights}</p>
                   <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
                     {project.metrics.map((metric) => (
                       <li key={metric} className="rounded-2xl bg-background/60 px-4 py-3">
@@ -114,7 +119,7 @@ export default function ProjectDetailPage({
               </Card>
               <Card className="border-primary/20 bg-primary/10">
                 <CardContent className="p-6 text-sm leading-7 text-foreground">
-                  This detailed route exists to make React Router meaningful in the portfolio and gives you a place to expand each project into a stronger case study later.
+                  {ui.detailNote}
                 </CardContent>
               </Card>
             </div>

@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getUiText } from "@/lib/i18n";
 import type { Project } from "@/lib/data";
 
 export function ProjectPreviewDialog({
@@ -19,6 +21,9 @@ export function ProjectPreviewDialog({
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }) {
+  const { language } = useLanguage();
+  const ui = getUiText(language);
+
   if (!project) {
     return <Dialog open={open} onOpenChange={onOpenChange} />;
   }
@@ -37,20 +42,20 @@ export function ProjectPreviewDialog({
         <div className="mt-6 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="space-y-4 text-sm leading-7 text-muted-foreground">
             <div>
-              <p className="mb-2 text-sm font-semibold text-foreground">Challenge</p>
+              <p className="mb-2 text-sm font-semibold text-foreground">{ui.dialogChallenge}</p>
               <p>{project.challenge}</p>
             </div>
             <div>
-              <p className="mb-2 text-sm font-semibold text-foreground">Solution</p>
+              <p className="mb-2 text-sm font-semibold text-foreground">{ui.dialogSolution}</p>
               <p>{project.solution}</p>
             </div>
             <div>
-              <p className="mb-2 text-sm font-semibold text-foreground">Outcome</p>
+              <p className="mb-2 text-sm font-semibold text-foreground">{ui.dialogOutcome}</p>
               <p>{project.outcome}</p>
             </div>
           </div>
           <div className="glass-panel rounded-[1.75rem] p-5">
-            <p className="text-sm font-semibold text-foreground">Stack</p>
+            <p className="text-sm font-semibold text-foreground">{ui.dialogStack}</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {project.stack.map((item) => (
                 <Badge key={item} className="bg-background/80 text-foreground">
@@ -58,7 +63,7 @@ export function ProjectPreviewDialog({
                 </Badge>
               ))}
             </div>
-            <p className="mt-6 text-sm font-semibold text-foreground">Highlights</p>
+            <p className="mt-6 text-sm font-semibold text-foreground">{ui.dialogHighlights}</p>
             <ul className="mt-3 space-y-3 text-sm text-muted-foreground">
               {project.metrics.map((metric) => (
                 <li key={metric} className="rounded-2xl bg-background/60 px-4 py-3">
@@ -70,7 +75,7 @@ export function ProjectPreviewDialog({
               <Button asChild>
                 <a href={project.demoUrl} target="_blank" rel="noreferrer">
                   <ArrowUpRight className="h-4 w-4" />
-                  Live Demo
+                  {ui.liveDemo}
                 </a>
               </Button>
               <Button variant="outline" asChild>

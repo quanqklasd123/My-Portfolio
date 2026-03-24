@@ -2,34 +2,39 @@ import { Compass, Layers3, Rocket } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { profile } from "@/lib/data";
-
-const cards = [
-  {
-    title: "Personal introduction",
-    description: profile.bio,
-    icon: Layers3
-  },
-  {
-    title: "Career goals",
-    description: profile.goals,
-    icon: Compass
-  },
-  {
-    title: "Strengths",
-    description: profile.strengths.join(" • "),
-    icon: Rocket
-  }
-];
+import { useLanguage } from "@/hooks/useLanguage";
+import { getPortfolioData, getUiText } from "@/lib/i18n";
 
 export function AboutSection() {
+  const { language } = useLanguage();
+  const { profile } = getPortfolioData(language);
+  const ui = getUiText(language);
+
+  const cards = [
+    {
+      title: ui.aboutCardTitles.intro,
+      description: profile.bio,
+      icon: Layers3
+    },
+    {
+      title: ui.aboutCardTitles.goals,
+      description: profile.goals,
+      icon: Compass
+    },
+    {
+      title: ui.aboutCardTitles.strengths,
+      description: profile.strengths.join(" â€¢ "),
+      icon: Rocket
+    }
+  ];
+
   return (
     <section id="about" className="section-spacing">
       <div className="container">
         <SectionHeading
-          eyebrow="About Me"
-          title="A full-stack foundation shaped by product thinking"
-          description="I approach internship preparation like real product work: build thoughtfully, communicate clearly, and keep polishing until the experience feels trustworthy."
+          eyebrow={ui.aboutEyebrow}
+          title={ui.aboutTitle}
+          description={ui.aboutDescription}
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {cards.map((card, index) => {

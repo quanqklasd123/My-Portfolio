@@ -1,5 +1,6 @@
 import { Github, Heart, Linkedin, Mail } from "lucide-react";
-import { contactLinks, profile } from "@/lib/data";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getPortfolioData, getUiText } from "@/lib/i18n";
 
 const iconMap = {
   Email: Mail,
@@ -8,6 +9,10 @@ const iconMap = {
 };
 
 export function Footer() {
+  const { language } = useLanguage();
+  const { contactLinks, profile } = getPortfolioData(language);
+  const ui = getUiText(language);
+
   return (
     <footer className="pb-10 pt-6">
       <div className="container">
@@ -15,7 +20,7 @@ export function Footer() {
           <div>
             <p className="text-sm font-medium text-foreground">{profile.name}</p>
             <p className="mt-1 text-sm text-muted-foreground">
-              Crafted for international internship applications with modern UI, motion, and clean engineering.
+              {ui.footerTagline}
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
@@ -37,7 +42,7 @@ export function Footer() {
           </div>
         </div>
         <p className="mt-4 text-center text-xs text-muted-foreground">
-          Built with React, Tailwind CSS, Framer Motion, and a lot of attention to detail <Heart className="inline h-3.5 w-3.5 text-rose-400" />
+          {ui.footerBuiltWith} <Heart className="inline h-3.5 w-3.5 text-rose-400" />
         </p>
       </div>
     </footer>

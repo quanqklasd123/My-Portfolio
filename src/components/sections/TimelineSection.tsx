@@ -2,16 +2,21 @@ import { GraduationCap, BriefcaseBusiness } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Badge } from "@/components/ui/badge";
-import { timeline } from "@/lib/data";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getPortfolioData, getUiText } from "@/lib/i18n";
 
 export function TimelineSection() {
+  const { language } = useLanguage();
+  const { timeline } = getPortfolioData(language);
+  const ui = getUiText(language);
+
   return (
     <section id="timeline" className="section-spacing">
       <div className="container">
         <SectionHeading
-          eyebrow="Experience & Education"
-          title="A timeline built around growth, shipping, and readiness"
-          description="Even at the intern stage, I want my portfolio to communicate progression clearly: what I have built, how I collaborate, and where I am heading next."
+          eyebrow={ui.timelineEyebrow}
+          title={ui.timelineTitle}
+          description={ui.timelineDescription}
         />
         <div className="relative mt-12 space-y-6 before:absolute before:left-4 before:top-4 before:h-[calc(100%-2rem)] before:w-px before:bg-border sm:before:left-1/2">
           {timeline.map((item, index) => {
@@ -26,7 +31,7 @@ export function TimelineSection() {
                           <Icon className="h-5 w-5" />
                         </span>
                         <div>
-                          <Badge className="mb-2 bg-background/80 text-foreground">{item.type}</Badge>
+                          <Badge className="mb-2 bg-background/80 text-foreground">{ui.timelineType[item.type]}</Badge>
                           <p className="text-sm text-muted-foreground">{item.period}</p>
                         </div>
                       </div>

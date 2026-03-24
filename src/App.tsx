@@ -1,19 +1,24 @@
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense, useEffect, useMemo } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ScrollToTopButton } from "@/components/layout/ScrollToTopButton";
 import { useActiveSection } from "@/hooks/useActiveSection";
-import { navItems } from "@/lib/data";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getPortfolioData, getUiText } from "@/lib/i18n";
 
 const HomePage = lazy(() => import("@/pages/HomePage"));
 const ProjectDetailPage = lazy(() => import("@/pages/ProjectDetailPage"));
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
 
-const sectionIds = navItems.map((item) => item.id);
-
 function App() {
+  const { language } = useLanguage();
+  const sectionIds = useMemo(
+    () => getPortfolioData(language).navItems.map((item) => item.id),
+    [language]
+  );
+  const ui = getUiText(language);
   const location = useLocation();
   const navigate = useNavigate();
   const activeSection = useActiveSection(sectionIds);
@@ -65,7 +70,7 @@ function App() {
         fallback={
           <div className="container flex min-h-screen items-center justify-center">
             <div className="glass-panel rounded-3xl px-6 py-4 text-sm text-muted-foreground">
-              Loading portfolio experience...
+              {ui.loadingExperience}
             </div>
           </div>
         }

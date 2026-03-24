@@ -5,16 +5,22 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { projects, type Project } from "@/lib/data";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getPortfolioData, getUiText } from "@/lib/i18n";
+import { type Project } from "@/lib/data";
 
 export function ProjectsSection({ onPreviewProject }: { onPreviewProject: (project: Project) => void }) {
+  const { language } = useLanguage();
+  const { projects } = getPortfolioData(language);
+  const ui = getUiText(language);
+
   return (
     <section id="projects" className="section-spacing">
       <div className="container">
         <SectionHeading
-          eyebrow="Projects"
-          title="Selected work that balances code quality and visual clarity"
-          description="Each project is framed to show how I think about the end user, engineering tradeoffs, and the kind of product ownership expected in strong internship environments."
+          eyebrow={ui.projectsEyebrow}
+          title={ui.projectsTitle}
+          description={ui.projectsDescription}
         />
         <div className="mt-12 grid gap-6 xl:grid-cols-2">
           {projects.map((project, index) => (
@@ -25,7 +31,7 @@ export function ProjectsSection({ onPreviewProject }: { onPreviewProject: (proje
                     {project.category}
                   </div>
                   <div className="max-w-sm rounded-[1.75rem] border border-white/40 bg-white/55 p-5 backdrop-blur">
-                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-700">Featured project</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-700">{ui.featuredProject}</p>
                     <h3 className="mt-4 text-2xl font-semibold text-slate-900">{project.title}</h3>
                     <p className="mt-3 text-sm leading-6 text-slate-700">{project.summary}</p>
                   </div>
@@ -42,11 +48,11 @@ export function ProjectsSection({ onPreviewProject }: { onPreviewProject: (proje
                   <div className="mt-6 flex flex-wrap gap-3">
                     <Button variant="secondary" onClick={() => onPreviewProject(project)}>
                       <Eye className="h-4 w-4" />
-                      Quick View
+                      {ui.quickView}
                     </Button>
                     <Button variant="outline" asChild>
                       <Link to={`/projects/${project.slug}`}>
-                        Case Study
+                        {ui.caseStudy}
                         <ArrowRight className="h-4 w-4" />
                       </Link>
                     </Button>
@@ -59,7 +65,7 @@ export function ProjectsSection({ onPreviewProject }: { onPreviewProject: (proje
                     <Button variant="ghost" asChild>
                       <a href={project.demoUrl} target="_blank" rel="noreferrer">
                         <ArrowUpRight className="h-4 w-4" />
-                        Live Demo
+                        {ui.liveDemo}
                       </a>
                     </Button>
                   </div>

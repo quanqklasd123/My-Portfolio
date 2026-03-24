@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Code2, Menu, Sparkles, X } from "lucide-react";
+import { LanguageToggle } from "@/components/layout/LanguageToggle";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/hooks/useLanguage";
 import { cn } from "@/lib/cn";
-import { navItems, profile } from "@/lib/data";
+import { getPortfolioData, getUiText } from "@/lib/i18n";
 
 export function Header({
   activeSection,
@@ -14,6 +16,9 @@ export function Header({
   onNavigateSection: (sectionId: string) => void;
 }) {
   const [open, setOpen] = useState(false);
+  const { language } = useLanguage();
+  const { navItems, profile } = getPortfolioData(language);
+  const ui = getUiText(language);
 
   const handleNavClick = (sectionId: string) => {
     onNavigateSection(sectionId);
@@ -56,16 +61,17 @@ export function Header({
 
           <div className="flex items-center gap-2">
             <div className="hidden items-center gap-2 sm:flex">
+              <LanguageToggle />
               <ThemeToggle />
               <Button variant="secondary" onClick={() => handleNavClick("contact")} className="rounded-full">
                 <Sparkles className="h-4 w-4" />
-                Let's Talk
+                {ui.letsTalk}
               </Button>
             </div>
             <button
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background/60 lg:hidden"
               onClick={() => setOpen((current) => !current)}
-              aria-label="Toggle navigation"
+              aria-label={ui.toggleNavigationAria}
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -97,9 +103,12 @@ export function Header({
                   </button>
                 ))}
                 <div className="mt-1 flex items-center justify-between rounded-2xl bg-background/60 px-3 py-2">
-                  <ThemeToggle />
+                  <div className="flex items-center gap-2">
+                    <LanguageToggle />
+                    <ThemeToggle />
+                  </div>
                   <Button variant="secondary" onClick={() => handleNavClick("contact")}>
-                    Let's Talk
+                    {ui.letsTalk}
                   </Button>
                 </div>
               </div>

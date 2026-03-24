@@ -2,7 +2,8 @@ import { Code2, FolderGit2, ServerCog } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { skillCategories } from "@/lib/data";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getPortfolioData, getUiText } from "@/lib/i18n";
 
 const iconMap = {
   Frontend: Code2,
@@ -11,17 +12,22 @@ const iconMap = {
 };
 
 export function SkillsSection() {
+  const { language } = useLanguage();
+  const { skillCategories } = getPortfolioData(language);
+  const ui = getUiText(language);
+
   return (
     <section id="skills" className="section-spacing">
       <div className="container">
         <SectionHeading
-          eyebrow="Skills"
-          title="A stack designed for practical delivery"
-          description="My toolkit is centered on shipping polished user interfaces while understanding the backend systems needed to support them cleanly."
+          eyebrow={ui.skillsEyebrow}
+          title={ui.skillsTitle}
+          description={ui.skillsDescription}
         />
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {skillCategories.map((category, index) => {
-            const Icon = iconMap[category.title as keyof typeof iconMap];
+            const iconByIndex = [Code2, ServerCog, FolderGit2][index] ?? FolderGit2;
+            const Icon = iconMap[category.title as keyof typeof iconMap] ?? iconByIndex;
             return (
               <Reveal key={category.title} delay={index * 0.08}>
                 <Card className="h-full overflow-hidden">
