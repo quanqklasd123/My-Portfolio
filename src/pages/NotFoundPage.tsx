@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 import { getUiText } from "@/lib/i18n";
@@ -20,7 +21,7 @@ export default function NotFoundPage() {
         <h1 className="mt-4 text-4xl font-semibold tracking-tight">{ui.notFoundHeadline}</h1>
         <p className="mt-4 text-base leading-7 text-muted-foreground">{ui.notFoundDescription}</p>
         <Button className="mt-8" asChild>
-          <a href="/">{ui.returnHome}</a>
+          <Link to="/">{ui.returnHome}</Link>
         </Button>
       </div>
     </motion.main>

@@ -9,6 +9,7 @@ export function HeroSection({ onNavigateSection }: { onNavigateSection: (section
   const { language } = useLanguage();
   const { heroStats, profile } = getPortfolioData(language);
   const ui = getUiText(language);
+  const baseUrl = import.meta.env.BASE_URL;
 
   return (
     <section className="relative overflow-hidden pb-14 pt-12 sm:pb-16 sm:pt-20">
@@ -38,7 +39,7 @@ export function HeroSection({ onNavigateSection }: { onNavigateSection: (section
                 <ArrowRight className="h-4 w-4" />
               </Button>
               <Button variant="secondary" size="lg" asChild>
-                <a href="/tran-van-quan-cv.pdf" download="Tran-Van-Quan-CV.pdf">
+                <a href={`${baseUrl}tran-van-quan-cv.pdf`} download="Tran-Van-Quan-CV.pdf">
                   <Download className="h-4 w-4" />
                   {ui.downloadCv}
                 </a>
@@ -75,7 +76,7 @@ export function HeroSection({ onNavigateSection }: { onNavigateSection: (section
                 <div className="mx-auto flex aspect-[4/5] w-full max-w-[330px] items-center justify-center rounded-[1.5rem] bg-gradient-to-b from-sky-200/55 via-blue-200/40 to-indigo-200/45 p-4">
                   <div className="h-full w-full overflow-hidden rounded-[1.2rem]">
                     <img
-                      src="/cv-assets/img-00.jpg"
+                      src={`${baseUrl}cv-assets/img-00.jpg`}
                       alt={ui.profileIllustrationAlt}
                       className="h-full w-full object-cover object-[50%_38%]"
                     />

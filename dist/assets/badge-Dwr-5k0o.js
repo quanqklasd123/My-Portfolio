@@ -1,0 +1,6 @@
+import{c as o,r as d,j as s,a as t}from"./index-vnMRsTOf.js";/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const i=[["path",{d:"M7 7h10v10",key:"1tivn9"}],["path",{d:"M7 17 17 7",key:"1vkiza"}]],f=o("arrow-up-right",i),n=d.forwardRef(({className:a,...e},r)=>s.jsx("div",{ref:r,className:t("glass-panel rounded-[1.75rem] border border-white/20 text-card-foreground",a),...e}));n.displayName="Card";const c=d.forwardRef(({className:a,...e},r)=>s.jsx("div",{ref:r,className:t("flex flex-col space-y-2 p-6",a),...e}));c.displayName="CardHeader";const p=d.forwardRef(({className:a,...e},r)=>s.jsx("h3",{ref:r,className:t("text-xl font-semibold tracking-tight",a),...e}));p.displayName="CardTitle";const l=d.forwardRef(({className:a,...e},r)=>s.jsx("p",{ref:r,className:t("text-sm leading-6 text-muted-foreground",a),...e}));l.displayName="CardDescription";const m=d.forwardRef(({className:a,...e},r)=>s.jsx("div",{ref:r,className:t("p-6 pt-0",a),...e}));m.displayName="CardContent";function C({className:a,children:e}){return s.jsx("span",{className:t("inline-flex items-center rounded-full border border-primary/15 bg-primary/10 px-3 py-1 text-xs font-medium text-primary",a),children:e})}export{f as A,C as B,n as C,c as a,p as b,m as c};
