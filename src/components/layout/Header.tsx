@@ -43,18 +43,20 @@ export function Header({
             </span>
           </button>
 
-          <nav className="hidden items-center gap-1 lg:flex">
+          <nav className="hidden items-center gap-1 md:flex">
             {navItems.map((item) => (
-              <button
+              <motion.button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
                 onMouseEnter={() => setHoveredNav(item.id)}
                 onMouseLeave={() => setHoveredNav(null)}
+                whileHover={activeSection === item.id ? undefined : { y: -1, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 className={cn(
                   "relative overflow-hidden rounded-full px-4 py-2 text-sm font-medium transition duration-300",
                   activeSection === item.id
                     ? "text-primary-foreground shadow-glow"
-                    : "text-muted-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {activeSection === item.id ? (
@@ -72,13 +74,13 @@ export function Header({
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute inset-0 rounded-full bg-secondary"
+                      className="absolute inset-0 rounded-full border border-primary/35 bg-primary/20"
                     />
                   ) : null}
                 </AnimatePresence>
 
                 <span className="relative z-10">{item.label}</span>
-              </button>
+              </motion.button>
             ))}
           </nav>
 
@@ -92,7 +94,7 @@ export function Header({
               </Button>
             </div>
             <button
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background/60 lg:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background/60 md:hidden"
               onClick={() => setOpen((current) => !current)}
               aria-label={ui.toggleNavigationAria}
             >
@@ -108,7 +110,7 @@ export function Header({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.22 }}
-              className="glass-panel mt-3 rounded-[2rem] p-3 lg:hidden"
+              className="glass-panel mt-3 rounded-[2rem] p-3 md:hidden"
             >
               <div className="flex flex-col gap-2">
                 {navItems.map((item) => (
