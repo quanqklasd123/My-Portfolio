@@ -38,7 +38,7 @@ export function HeroSection({ onNavigateSection }: { onNavigateSection: (section
                 <ArrowRight className="h-4 w-4" />
               </Button>
               <Button variant="secondary" size="lg" asChild>
-                <a href="/tran-van-quan-cv.html" download>
+                <a href="/tran-van-quan-cv.pdf" download="Tran-Van-Quan-CV.pdf">
                   <Download className="h-4 w-4" />
                   {ui.downloadCv}
                 </a>
@@ -73,7 +73,7 @@ export function HeroSection({ onNavigateSection }: { onNavigateSection: (section
             <div className="grid gap-4 sm:grid-cols-[1fr_0.88fr]">
               <div className="relative rounded-[2rem] bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-100 p-4 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
                 <img
-                  src="/profile-illustration.svg"
+                  src="/cv-assets/img-00.jpg"
                   alt={ui.profileIllustrationAlt}
                   className="w-full rounded-[1.5rem] object-cover"
                 />
