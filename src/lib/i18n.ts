@@ -118,19 +118,19 @@ const viData: PortfolioData = {
     { id: "contact", label: "Liên Hệ" }
   ],
   profile: {
-    name: "Tran Van Quân",
-    role: "Thực Tập Sinh Full-stack Developer",
-    location: "TP. Hồ Chí Minh, Việt Nam",
+    name: "Trần Văn Quân",
+    role: "Frontend Developer",
+    location: "Phường Hiệp Phú, TP. Thủ Đức",
     intro:
-      "Mình xây dựng giao diện phản hồi tốt và luồng backend ổn định cho các sản phẩm cần nhanh, mượt và sẵn sàng cho đội ngũ quốc tế.",
+      "Mình là sinh viên năm cuối ngành Công nghệ Thông tin, tập trung xây dựng giao diện responsive với kinh nghiệm thực hành ở nhiều dự án công nghệ hiện đại.",
     bio:
-      "Mình là ứng viên thực tập full-stack, thích biến ý tưởng sản phẩm thành trải nghiệm sạch sẽ, dễ bảo trì. Mình tập trung vào giao diện hiện đại, dễ dùng và được hậu thuẫn bởi dịch vụ backend thực tiễn.",
+      "Mình là sinh viên năm cuối chuyên ngành Kỹ thuật Phần mềm tại HUTECH. Mình thích xây dựng sản phẩm thực tế với kiến trúc rõ ràng và giao diện thân thiện, đồng thời đã có kinh nghiệm dự án với React, TypeScript, Java Spring Boot và ASP.NET Core.",
     goals:
-      "Mục tiêu của mình là gia nhập một đội ngũ kỹ thuật quốc tế, đóng góp vào sản phẩm thực tế, nâng tư duy hệ thống và phát triển thành kỹ sư kết nối tốt giữa chất lượng thiết kế và độ tin cậy backend.",
+      "Mình đang ứng tuyển vị trí Frontend Developer để làm việc trong môi trường thực tế, đóng góp vào sản phẩm thật và tiếp tục nâng cao năng lực xây dựng giao diện responsive cũng như phối hợp trong quy trình phát triển hệ thống web hoàn chỉnh.",
     strengths: [
-      "Chủ động từ ý tưởng đến bản triển khai sẵn sàng",
-      "Làm tốt cả React UI, REST API và quy trình Git theo nhóm",
-      "Tư duy sản phẩm, chú ý UX, hiệu năng và độ rõ ràng của code"
+      "Kinh nghiệm triển khai dự án với kiến trúc component tái sử dụng",
+      "Nắm chắc OOP, MVC, REST API và CRUD",
+      "Thích nghi nhanh với công cụ mới và quy trình làm việc nhóm"
     ]
   },
   heroStats: [
@@ -141,156 +141,147 @@ const viData: PortfolioData = {
   skillCategories: [
     {
       title: "Frontend",
-      description: "Giao diện sạch, phản hồi tốt và chú trọng trải nghiệm.",
+      description: "Xây dựng giao diện responsive và thân thiện với người dùng.",
       items: [
         { name: "React", level: 80 },
-        { name: "Tailwind CSS", level: 78 },
-        { name: "JavaScript / TypeScript", level: 76 }
+        { name: "Vue.js", level: 76 },
+        { name: "JavaScript / TypeScript", level: 78 }
       ]
     },
     {
       title: "Backend",
-      description: "API và dịch vụ tập trung vào khả năng mở rộng thực tế.",
+      description: "Phát triển dịch vụ và API theo định hướng kiến trúc rõ ràng.",
       items: [
         { name: "Java Spring Boot", level: 77 },
-        { name: "C# / .NET", level: 75 },
+        { name: "ASP.NET Core", level: 75 },
         { name: "Node.js", level: 74 }
       ]
     },
     {
       title: "Công cụ",
-      description: "Công cụ hằng ngày để ship nhanh và cộng tác tốt hơn.",
+      description: "Công cụ quản lý mã nguồn và tự động hóa quy trình phát hành.",
       items: [
         { name: "Git", level: 79 },
-        { name: "GitHub", level: 77 },
-        { name: "VS Code", level: 80 }
+        { name: "GitHub", level: 78 },
+        { name: "GitHub Actions", level: 74 }
       ]
     }
   ],
   projects: [
     {
       slug: "sole-mundo-commerce",
-      title: "Sole Mundo Commerce Platform",
-      category: "Nền tảng Thương mại điện tử",
+      title: "Sole Mundo (Shoes Shop)",
+      category: "Dự án Thương mại điện tử",
       summary:
-        "Trải nghiệm mua sắm full-stack với giao diện storefront mượt, luồng xác thực và kiến trúc danh mục dễ mở rộng.",
+        "Dự án e-commerce theo kiến trúc phân lớp, tập trung vào khả năng bảo trì và mở rộng hệ thống.",
       description:
-        "Thiết kế trải nghiệm e-commerce cao cấp để giới thiệu bộ sưu tập giày chọn lọc, điều hướng hiện đại, khu vực tài khoản an toàn và hành trình duyệt sản phẩm tối ưu chuyển đổi.",
+        "Xây dựng hệ thống bán giày dựa trên mô hình thực tế với Java Spring Boot, MySQL và Thymeleaf, chú trọng cấu trúc và tính mở rộng.",
       challenge:
-        "Thách thức chính là tạo storefront cao cấp ở frontend nhưng vẫn dễ quản trị danh mục và đơn hàng ở backend.",
+        "Đảm bảo kiến trúc hệ thống dễ bảo trì và mở rộng trong khi vẫn xử lý tốt phân quyền người dùng và luồng nghiệp vụ cốt lõi.",
       solution:
-        "Mình xây dựng giao diện React responsive kết hợp backend Spring Boot có cấu trúc, tổ chức model dữ liệu sản phẩm và tạo component tái sử dụng cho card, chi tiết sản phẩm và luồng checkout.",
+        "Áp dụng mô hình Controller - Service - Repository, triển khai phân quyền cơ bản và tổ chức dữ liệu MySQL theo luồng xử lý rõ ràng.",
       outcome:
-        "Kết quả là một dự án thương mại điện tử theo tiêu chuẩn production, thể hiện tốt cả độ chỉn chu UI lẫn tư duy full-stack cho mục tiêu thực tập.",
-      stack: ["React", "Tailwind CSS", "Java Spring Boot", "REST API", "MySQL"],
-      metrics: ["UX xoay quanh danh mục", "Component sản phẩm tái sử dụng", "Kiến trúc sẵn sàng xác thực"],
-      githubUrl: "https://github.com/your-username/sole-mundo-commerce",
-      demoUrl: "https://solemundo-demo.vercel.app",
+        "Giúp mình củng cố tư duy kiến trúc hệ thống, quản lý dữ liệu và khả năng mở rộng cho ứng dụng web backend-centric.",
+      stack: ["Java Spring Boot", "MySQL", "Thymeleaf"],
+      metrics: ["Kiến trúc phân lớp", "Quản lý vai trò", "Nền tảng backend mở rộng"],
+      githubUrl: "https://github.com/quanqklasd123/Sole-Mundo",
+      demoUrl: "https://github.com/quanqklasd123/Sole-Mundo",
       accent: "from-sky-500/25 via-blue-500/20 to-indigo-500/30"
     },
     {
-      slug: "inventory-pulse-dashboard",
-      title: "Inventory Pulse Dashboard",
-      category: "Dashboard Vận hành",
+      slug: "personal-portfolio-website",
+      title: "Personal Portfolio Website",
+      category: "Dự án Frontend",
       summary:
-        "Dashboard quản lý tồn kho, cập nhật nhà cung cấp và báo cáo dễ theo dõi cho nhóm.",
+        "Website portfolio song ngữ Anh/Việt với thiết kế responsive và trải nghiệm mượt.",
       description:
-        "Xây dựng dashboard giúp đội nhỏ theo dõi sức khỏe tồn kho, hàng sắp về và điểm nghẽn xử lý đơn qua hệ card, biểu đồ và phân nhóm trạng thái rõ ràng.",
+        "Phát triển portfolio hiện đại tập trung vào kiến trúc giao diện sạch, component tái sử dụng và các tương tác thực tế.",
       challenge:
-        "Dashboard vận hành thường dễ rối mắt, nên thách thức cốt lõi là làm dữ liệu phức tạp trở nên dễ đọc ngay từ cái nhìn đầu.",
+        "Thiết kế cấu trúc frontend có thể mở rộng mà vẫn dễ bảo trì khi có nhiều section, nhiều ngôn ngữ và nhiều luồng tương tác.",
       solution:
-        "Mình tổ chức UI theo thứ bậc rõ ràng, widget mô-đun và endpoint backend hỗ trợ số liệu tổng quan, lọc và truy xuất nhanh trạng thái tồn kho quan trọng.",
+        "Triển khai component tái sử dụng, custom hooks, quản lý nội dung tập trung, chuyển ngôn ngữ, dark/light mode và route chi tiết dự án.",
       outcome:
-        "Dự án này thể hiện khả năng thiết kế dashboard, tư duy API và biến dữ liệu thô thành thông tin hỗ trợ quyết định.",
-      stack: ["React", "Framer Motion", "Node.js", "Express", "PostgreSQL"],
-      metrics: ["KPI rõ ràng", "Bố cục sẵn sàng cho bộ lọc", "Báo cáo thân thiện theo nhóm"],
-      githubUrl: "https://github.com/your-username/inventory-pulse-dashboard",
-      demoUrl: "https://inventory-pulse.vercel.app",
+        "Giúp mình nâng cao tư duy kiến trúc frontend và khả năng xây dựng giao diện responsive thân thiện với người dùng.",
+      stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      metrics: ["Giao diện song ngữ", "Kiến trúc tái sử dụng", "UX responsive"],
+      githubUrl: "https://github.com/quanqklasd123/My-Portfolio",
+      demoUrl: "https://github.com/quanqklasd123/My-Portfolio",
       accent: "from-emerald-500/25 via-teal-500/20 to-cyan-500/30"
     },
     {
-      slug: "campus-event-hub",
-      title: "Campus Event Hub",
-      category: "Nền tảng Cộng đồng",
+      slug: "no-code-web-app-builder",
+      title: "No-code Web App Builder",
+      category: "Nền tảng Full-stack",
       summary:
-        "Nền tảng dành cho sinh viên để khám phá, lưu và quản lý sự kiện trong một trải nghiệm web hiện đại.",
+        "Nền tảng tạo web app kéo-thả, có marketplace chia sẻ sản phẩm và kiến trúc multi-tenant.",
       description:
-        "Tạo trải nghiệm tập trung giúp sinh viên duyệt sự kiện sắp diễn ra, xem chi tiết và tương tác theo danh mục với cảm giác trực quan trên cả mobile và desktop.",
+        "Xây dựng nền tảng cho phép người dùng tạo ứng dụng bằng thao tác trực quan và xuất bản lên marketplace cộng đồng.",
       challenge:
-        "Sản phẩm cần hỗ trợ nhiều loại sự kiện và thao tác người dùng mà vẫn giữ giao diện rõ ràng trên màn hình nhỏ.",
+        "Đảm bảo tách biệt dữ liệu giữa nhiều tenant để tăng bảo mật khi nhiều người dùng cùng vận hành trên một hệ thống.",
       solution:
-        "Mình thiết kế module danh mục tái sử dụng, card theo lịch và endpoint dịch vụ giữ dữ liệu sự kiện có cấu trúc, dễ mở rộng.",
+        "Kết hợp giao diện drag-and-drop bằng React với dịch vụ ASP.NET Core và triển khai mô hình multi-tenant để tách dữ liệu theo tenant.",
       outcome:
-        "Sản phẩm cuối thể hiện tư duy frontend hướng người dùng, kỷ luật responsive và khả năng tổ chức tính năng tăng trưởng sạch sẽ.",
-      stack: ["React", "Tailwind CSS", "C#", ".NET", "SQL Server"],
-      metrics: ["Duyệt sự kiện mobile-first", "Cấu trúc nội dung dễ mở rộng", "Luồng onboarding thân thiện"],
-      githubUrl: "https://github.com/your-username/campus-event-hub",
-      demoUrl: "https://campus-event-hub.vercel.app",
+        "Giúp mình hiểu sâu hơn về nhu cầu người dùng, tư duy sản phẩm và kiến trúc hệ thống theo định hướng thị trường.",
+      stack: ["React", "ASP.NET Core", "MongoDB"],
+      metrics: ["Trình dựng kéo-thả", "Marketplace cộng đồng", "Bảo mật multi-tenant"],
+      githubUrl: "https://github.com/quanqklasd123/NEXUS-403",
+      demoUrl: "https://github.com/quanqklasd123/NEXUS-403",
       accent: "from-amber-500/25 via-orange-500/20 to-rose-500/30"
-    },
-    {
-      slug: "focuslane-habit-tracker",
-      title: "FocusLane Habit Tracker",
-      category: "Ứng dụng Năng suất",
-      summary:
-        "Ứng dụng năng suất cá nhân gọn nhẹ để theo dõi streak, mục tiêu và đà tiến bộ theo tuần.",
-      description:
-        "Phát triển trải nghiệm tập trung vào năng suất với chỉ báo tiến độ rõ ràng, tương tác nhẹ và hệ thống hình ảnh giúp duy trì động lực mà không rối.",
-      challenge:
-        "Sản phẩm thói quen dễ gây lặp lại, nên thách thức là tạo tương tác đủ tạo động lực nhưng vẫn đơn giản và nhanh.",
-      solution:
-        "Mình dùng phản hồi chuyển động, card mục tiêu có cấu trúc và cách lưu trữ gọn nhẹ để mang lại trải nghiệm mượt, dễ tiếp cận.",
-      outcome:
-        "Dự án cho thấy cách mình tư duy về UX giữ chân người dùng, micro-interaction và chuyển hóa hành vi thành giao diện sản phẩm.",
-      stack: ["React", "TypeScript", "Tailwind CSS", "Firebase"],
-      metrics: ["Tập trung micro-interaction", "UX hỗ trợ giữ chân", "Insight tuần đơn giản"],
-      githubUrl: "https://github.com/your-username/focuslane-habit-tracker",
-      demoUrl: "https://focuslane.vercel.app",
-      accent: "from-fuchsia-500/25 via-violet-500/20 to-indigo-500/30"
     }
   ],
   timeline: [
     {
       type: "Experience",
-      title: "Thực hành Dự án Full-stack",
-      organization: "Dự án cá nhân + học thuật",
-      period: "2024 - Nay",
+      title: "Phát triển phần mềm theo dự án",
+      organization: "Dự án học thuật + cá nhân",
+      period: "2023 - Nay",
       description:
-        "Xây dựng portfolio, dashboard và nền tảng theo định hướng production để nâng năng lực tư duy sản phẩm đầu cuối và sẵn sàng thực tập.",
+        "Thực hiện nhiều dự án mô phỏng thực tế ở cả frontend và backend để nâng cao kỹ năng triển khai sản phẩm.",
       highlights: [
-        "Chuyển ý tưởng UI thành ứng dụng React responsive",
-        "Thiết kế dịch vụ backend với Spring Boot, .NET và Node.js",
-        "Rèn luyện cấu trúc code sạch, quy trình Git và component tái sử dụng"
-      ]
-    },
-    {
-      type: "Experience",
-      title: "Thành viên Cộng tác Frontend",
-      organization: "Dự án nhóm sinh viên",
-      period: "2023 - 2025",
-      description:
-        "Làm việc cùng đồng đội để triển khai giao diện, thống nhất quy trình GitHub và lặp nhanh theo phản hồi.",
-      highlights: [
-        "Chuyển wireframe thành các phần giao diện có thể phát hành",
-        "Tập trung vào tính nhất quán thị giác, khoảng cách và responsive",
-        "Hỗ trợ phân chia nhiệm vụ và tái sử dụng component"
+        "Xây dựng kiến trúc phân lớp và multi-tenant",
+        "Triển khai giao diện responsive với React và CSS framework hiện đại",
+        "Rèn luyện quy trình làm việc với Git và tài liệu dự án"
       ]
     },
     {
       type: "Education",
-      title: "Kỹ thuật Phần mềm",
-      organization: "Lộ trình Đại học",
-      period: "Dự kiến tốt nghiệp 2027",
+      title: "Công nghệ Thông tin (Kỹ thuật Phần mềm)",
+      organization: "Đại học HUTECH",
+      period: "2022 - 2026",
       description:
-        "Xây nền tảng về nguyên lý kỹ thuật phần mềm, cấu trúc dữ liệu, phát triển web app và triển khai dự án cộng tác.",
+        "Sinh viên năm cuối với định hướng chuyên sâu về kỹ thuật phần mềm và phát triển hệ thống web.",
       highlights: [
-        "Học phần phục vụ phát triển ứng dụng full-stack",
-        "Áp dụng lập trình qua dự án học tập và cá nhân",
-        "Liên tục cải thiện giao tiếp kỹ thuật bằng tiếng Anh"
+        "Major: Software Engineering",
+        "GPA: 3.0 / 4.0",
+        "Học phần và dự án về frontend, backend và cơ sở dữ liệu"
+      ]
+    },
+    {
+      type: "Experience",
+      title: "Chứng chỉ và tự học",
+      organization: "Cisco NetAcad + Tự học",
+      period: "2025",
+      description:
+        "Liên tục củng cố kiến thức kỹ thuật qua các chứng chỉ và lộ trình tự học có cấu trúc.",
+      highlights: [
+        "Networking Basics (11/2025)",
+        "JavaScript Essentials 1",
+        "JavaScript Essentials 2 (12/2025)"
       ]
     }
   ],
-  contactLinks
+  contactLinks: [
+    {
+      label: "Email",
+      value: "tvquan2004@gmail.com",
+      href: "mailto:tvquan2004@gmail.com"
+    },
+    {
+      label: "GitHub",
+      value: "github.com/quanqklasd123",
+      href: "https://github.com/quanqklasd123"
+    }
+  ]
 };
 
 const uiTextMap: Record<Language, UiText> = {
@@ -300,7 +291,7 @@ const uiTextMap: Record<Language, UiText> = {
     languageButtonAria: "Toggle language",
     letsTalk: "Let's Talk",
     toggleNavigationAria: "Toggle navigation",
-    heroAvailability: "Available for international internship opportunities",
+    heroAvailability: "Open to Frontend Developer opportunities",
     heroTitleBefore: "Building modern products with",
     heroTitleHighlight: "frontend polish",
     heroTitleAfter: "and backend clarity.",
@@ -316,11 +307,11 @@ const uiTextMap: Record<Language, UiText> = {
       "Portfolio-ready projects for international company applications"
     ],
     heroInternshipNote:
-      "Open to internship roles where I can grow through real product delivery, mentorship, and high engineering standards.",
+      "Open to frontend roles where I can contribute to real products, collaborate with teams, and keep improving engineering quality.",
     aboutEyebrow: "About Me",
     aboutTitle: "A full-stack foundation shaped by product thinking",
     aboutDescription:
-      "I approach internship preparation like real product work: build thoughtfully, communicate clearly, and keep polishing until the experience feels trustworthy.",
+      "I approach software development like real product work: build thoughtfully, communicate clearly, and keep polishing until the experience feels trustworthy.",
     aboutCardTitles: {
       intro: "Personal introduction",
       goals: "Career goals",
@@ -333,7 +324,7 @@ const uiTextMap: Record<Language, UiText> = {
     projectsEyebrow: "Projects",
     projectsTitle: "Selected work that balances code quality and visual clarity",
     projectsDescription:
-      "Each project is framed to show how I think about the end user, engineering tradeoffs, and the kind of product ownership expected in strong internship environments.",
+      "Each project is framed to show how I think about end users, engineering tradeoffs, and practical product ownership in real development teams.",
     featuredProject: "Featured project",
     quickView: "Quick View",
     caseStudy: "Case Study",
@@ -349,7 +340,7 @@ const uiTextMap: Record<Language, UiText> = {
     contactEyebrow: "Contact",
     contactTitle: "Let's build something thoughtful together",
     contactDescription:
-      "Whether it is an internship opportunity, collaboration, or a product conversation, I am open to connecting with teams that care about craftsmanship and growth.",
+      "Whether it is a frontend opportunity, collaboration, or a product conversation, I am open to connecting with teams that care about craftsmanship and growth.",
     contactCardNote:
       "I can also customize this portfolio with your real personal details, real project links, and bilingual content if you want a version ready to deploy immediately.",
     openLabelPrefix: "Open",
@@ -366,7 +357,7 @@ const uiTextMap: Record<Language, UiText> = {
     inquiryFallbackName: "a potential recruiter",
     inquiryDefaultMessage: "Hi, I would like to connect about an opportunity.",
     footerTagline:
-      "Crafted for international internship applications with modern UI, motion, and clean engineering.",
+      "Crafted to showcase frontend engineering strengths with modern UI, smooth motion, and maintainable architecture.",
     footerBuiltWith: "Built with React, Tailwind CSS, Framer Motion, and a lot of attention to detail",
     dialogChallenge: "Challenge",
     dialogSolution: "Solution",
@@ -395,7 +386,7 @@ const uiTextMap: Record<Language, UiText> = {
     languageButtonAria: "Chuyển ngôn ngữ",
     letsTalk: "Trao Đổi",
     toggleNavigationAria: "Mở đóng menu điều hướng",
-    heroAvailability: "Sẵn sàng cho các cơ hội thực tập quốc tế",
+    heroAvailability: "Sẵn sàng cho các cơ hội Frontend Developer",
     heroTitleBefore: "Xây dựng sản phẩm hiện đại với",
     heroTitleHighlight: "giao diện chỉn chu",
     heroTitleAfter: "và backend rõ ràng.",
@@ -411,11 +402,11 @@ const uiTextMap: Record<Language, UiText> = {
       "Dự án sẵn sàng cho hồ sơ ứng tuyển công ty quốc tế"
     ],
     heroInternshipNote:
-      "Sẵn sàng cho vị trí thực tập nơi mình có thể phát triển qua sản phẩm thực tế, mentoring và tiêu chuẩn kỹ thuật cao.",
+      "Sẵn sàng cho các vị trí frontend nơi mình có thể đóng góp cho sản phẩm thực tế và tiếp tục nâng cao chất lượng kỹ thuật.",
     aboutEyebrow: "Giới Thiệu",
     aboutTitle: "Nền tảng full-stack được định hình bởi tư duy sản phẩm",
     aboutDescription:
-      "Mình chuẩn bị cho thực tập như làm sản phẩm thật: xây kỹ, trao đổi rõ ràng và liên tục tinh chỉnh đến khi trải nghiệm đủ tin cậy.",
+      "Mình tiếp cận phát triển phần mềm như làm sản phẩm thật: xây kỹ, trao đổi rõ ràng và liên tục tinh chỉnh đến khi trải nghiệm đủ tin cậy.",
     aboutCardTitles: {
       intro: "Giới thiệu bản thân",
       goals: "Mục tiêu nghề nghiệp",
@@ -428,7 +419,7 @@ const uiTextMap: Record<Language, UiText> = {
     projectsEyebrow: "Dự Án",
     projectsTitle: "Những sản phẩm cân bằng chất lượng code và tính rõ ràng thị giác",
     projectsDescription:
-      "Mỗi dự án được trình bày để thể hiện cách mình nghĩ về người dùng cuối, đánh đổi kỹ thuật và tinh thần làm chủ sản phẩm trong môi trường thực tập tốt.",
+      "Mỗi dự án được trình bày để thể hiện cách mình nghĩ về người dùng cuối, đánh đổi kỹ thuật và tinh thần làm chủ sản phẩm trong môi trường phát triển thực tế.",
     featuredProject: "Dự án nổi bật",
     quickView: "Xem Nhanh",
     caseStudy: "Phân Tích Dự Án",
@@ -444,7 +435,7 @@ const uiTextMap: Record<Language, UiText> = {
     contactEyebrow: "Liên Hệ",
     contactTitle: "Cùng xây dựng điều gì đó chỉn chu",
     contactDescription:
-      "Dù là cơ hội thực tập, hợp tác hay trao đổi về sản phẩm, mình luôn sẵn sàng kết nối với các đội ngũ coi trọng tay nghề và sự phát triển.",
+      "Dù là cơ hội frontend, hợp tác hay trao đổi về sản phẩm, mình luôn sẵn sàng kết nối với các đội ngũ coi trọng tay nghề và sự phát triển.",
     contactCardNote:
       "Mình cũng có thể tùy chỉnh portfolio này với thông tin thật của bạn, link dự án thật và nội dung song ngữ để sẵn sàng triển khai ngay.",
     openLabelPrefix: "Mở",
@@ -461,7 +452,7 @@ const uiTextMap: Record<Language, UiText> = {
     inquiryFallbackName: "một nhà tuyển dụng tiềm năng",
     inquiryDefaultMessage: "Xin chào, tôi muốn trao đổi về một cơ hội phù hợp.",
     footerTagline:
-      "Được xây dựng cho hồ sơ ứng tuyển thực tập quốc tế với UI hiện đại, chuyển động mượt và kỹ thuật sạch.",
+      "Được xây dựng để thể hiện năng lực frontend với UI hiện đại, chuyển động mượt và kiến trúc dễ bảo trì.",
     footerBuiltWith: "Xây dựng bằng React, Tailwind CSS, Framer Motion và rất nhiều sự chăm chút",
     dialogChallenge: "Thách thức",
     dialogSolution: "Giải pháp",

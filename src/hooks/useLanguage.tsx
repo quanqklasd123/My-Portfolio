@@ -40,8 +40,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       document.documentElement.lang = language;
       document.title =
         language === "vi"
-          ? "Tran Van Quân | Thực Tập Sinh Full-stack Developer"
-          : "Tran Van Quân | Full-stack Developer Intern";
+          ? "Trần Văn Quân | Frontend Developer"
+          : "Tran Van Quan | Frontend Developer";
     }
 
     window.localStorage.setItem("portfolio-language", language);

@@ -31,7 +31,7 @@ export function ContactSection() {
       `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message || ui.inquiryDefaultMessage}`
     );
 
-    window.location.href = `mailto:hello@minhanh.dev?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:tvquan2004@gmail.com?subject=${subject}&body=${body}`;
     setStatus(ui.formHintSent);
   };
 

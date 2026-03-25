@@ -59,19 +59,19 @@ export type ContactLink = {
 };
 
 export const profile: Profile = {
-  name: "Tran Van Quân",
-  role: "Full-stack Developer Intern",
-  location: "Ho Chi Minh City, Vietnam",
+  name: "Tran Van Quan",
+  role: "Frontend Developer",
+  location: "Hiep Phu Ward, Thu Duc City",
   intro:
-    "I build responsive interfaces and reliable backend workflows for products that need to feel fast, polished, and ready for global teams.",
+    "Final-year Information Technology student building responsive web interfaces with practical project experience across modern frontend and backend ecosystems.",
   bio:
-    "I am a full-stack developer intern candidate who enjoys turning product ideas into clean, maintainable experiences. My focus is building interfaces that feel modern and intuitive while supporting them with practical backend services.",
+    "I am a final-year IT student majoring in Software Engineering at HUTECH University. I enjoy building practical products with clean architecture and user-friendly interfaces, and I have hands-on project experience with React, TypeScript, Java Spring Boot, and ASP.NET Core.",
   goals:
-    "I am aiming to join an international engineering team where I can contribute to real product delivery, sharpen my system thinking, and grow into an engineer who bridges design quality with backend reliability.",
+    "I am applying for a Frontend Developer role to work in a real-world environment, contribute to actual products, and continue improving my ability to design responsive UI and collaborate in complete web system delivery.",
   strengths: [
-    "Strong ownership from concept to deploy-ready implementation",
-    "Comfortable across React UI, REST APIs, and collaborative Git workflows",
-    "Product mindset with attention to UX detail, performance, and code clarity"
+    "Hands-on project delivery with reusable component architecture",
+    "Solid understanding of OOP, MVC, REST API, and CRUD principles",
+    "Strong adaptability with modern tools, AI-assisted workflows, and team collaboration"
   ]
 };
 
@@ -92,29 +92,29 @@ export const heroStats: HeroStat[] = [
 export const skillCategories: SkillCategory[] = [
   {
     title: "Frontend",
-    description: "Interfaces that feel clean, responsive, and conversion-aware.",
+    description: "Building responsive and user-friendly interfaces with modern frameworks.",
     items: [
       { name: "React", level: 80 },
-      { name: "Tailwind CSS", level: 78 },
-      { name: "JavaScript / TypeScript", level: 76 }
+      { name: "Vue.js", level: 76 },
+      { name: "JavaScript / TypeScript", level: 78 }
     ]
   },
   {
     title: "Backend",
-    description: "API and service work focused on maintainability and practical scaling.",
+    description: "Service development and API implementation with practical architecture patterns.",
     items: [
       { name: "Java Spring Boot", level: 77 },
-      { name: "C# / .NET", level: 75 },
+      { name: "ASP.NET Core", level: 75 },
       { name: "Node.js", level: 74 }
     ]
   },
   {
     title: "Tools",
-    description: "Daily workflow tools for shipping faster and collaborating better.",
+    description: "Version control, editor workflow, and deployment automation tools.",
     items: [
       { name: "Git", level: 79 },
-      { name: "GitHub", level: 77 },
-      { name: "VS Code", level: 80 }
+      { name: "GitHub", level: 78 },
+      { name: "GitHub Actions", level: 74 }
     ]
   }
 ];
@@ -122,124 +122,104 @@ export const skillCategories: SkillCategory[] = [
 export const projects: Project[] = [
   {
     slug: "sole-mundo-commerce",
-    title: "Sole Mundo Commerce Platform",
-    category: "E-commerce Platform",
+    title: "Sole Mundo (Shoes Shop)",
+    category: "E-commerce Project",
     summary:
-      "A full-stack shopping experience with polished storefront UI, authentication flows, and scalable catalog architecture.",
+      "A layered-architecture e-commerce project focused on maintainability, role management, and practical database handling.",
     description:
-      "Designed a premium e-commerce experience for showcasing curated footwear collections with modern navigation, secure account areas, and conversion-focused product browsing.",
+      "Built an e-commerce system based on a real-world model with Java Spring Boot, MySQL, and Thymeleaf, emphasizing structure and scalability.",
     challenge:
-      "The main challenge was creating a storefront that feels premium on the frontend while staying manageable from the backend for catalog updates and order handling.",
+      "Ensuring the architecture remains easy to maintain and extend while handling user roles and core commerce flows.",
     solution:
-      "I built a responsive React interface paired with a structured Spring Boot backend, organized product data models, and designed reusable components for cards, product details, and checkout-oriented flows.",
+      "Applied a layered design (Controller - Service - Repository), implemented role-based behaviors, and organized MySQL operations with clear data flow boundaries.",
     outcome:
-      "The result is a production-style commerce showcase that demonstrates both UI polish and full-stack implementation thinking suitable for internship applications.",
-    stack: ["React", "Tailwind CSS", "Java Spring Boot", "REST API", "MySQL"],
-    metrics: ["Catalog-first UX", "Reusable product components", "Auth-ready architecture"],
-    githubUrl: "https://github.com/your-username/sole-mundo-commerce",
-    demoUrl: "https://solemundo-demo.vercel.app",
+      "Strengthened understanding of system architecture, data handling, and scalability in backend-driven web applications.",
+    stack: ["Java Spring Boot", "MySQL", "Thymeleaf"],
+    metrics: ["Layered architecture", "Role management", "Scalable backend foundation"],
+    githubUrl: "https://github.com/quanqklasd123/Sole-Mundo",
+    demoUrl: "https://github.com/quanqklasd123/Sole-Mundo",
     accent: "from-sky-500/25 via-blue-500/20 to-indigo-500/30"
   },
   {
-    slug: "inventory-pulse-dashboard",
-    title: "Inventory Pulse Dashboard",
-    category: "Operations Dashboard",
+    slug: "personal-portfolio-website",
+    title: "Personal Portfolio Website",
+    category: "Frontend Project",
     summary:
-      "A management dashboard for stock visibility, supplier updates, and team-friendly reporting.",
+      "A bilingual (English/Vietnamese) portfolio with responsive design and smooth motion-driven user experience.",
     description:
-      "Built a dashboard interface that helps small teams monitor inventory health, incoming stock, and fulfillment bottlenecks through clear cards, charts, and status groupings.",
+      "Developed a modern portfolio focused on clean UI architecture, reusable components, and practical product interactions.",
     challenge:
-      "Operational dashboards often become visually noisy, so the core challenge was making complex inventory data easy to read at a glance.",
+      "Building a scalable frontend structure that remains clean while supporting multiple sections, languages, and interaction flows.",
     solution:
-      "I structured the UI with a strong hierarchy, modular widgets, and backend endpoints that support summary metrics, filtering, and fast retrieval of critical stock states.",
+      "Implemented reusable components, custom hooks, centralized content management, language switching, dark/light mode, and project detail routing.",
     outcome:
-      "This project highlights dashboard design, API thinking, and the ability to transform raw data into practical decision support.",
-    stack: ["React", "Framer Motion", "Node.js", "Express", "PostgreSQL"],
-    metrics: ["Clear KPI surfaces", "Filter-ready layout", "Team-focused reporting"],
-    githubUrl: "https://github.com/your-username/inventory-pulse-dashboard",
-    demoUrl: "https://inventory-pulse.vercel.app",
+      "Improved frontend architecture thinking and practical skills in building responsive, user-friendly product interfaces.",
+    stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    metrics: ["Bilingual UI", "Reusable architecture", "Responsive UX"],
+    githubUrl: "https://github.com/quanqklasd123/My-Portfolio",
+    demoUrl: "https://github.com/quanqklasd123/My-Portfolio",
     accent: "from-emerald-500/25 via-teal-500/20 to-cyan-500/30"
   },
   {
-    slug: "campus-event-hub",
-    title: "Campus Event Hub",
-    category: "Community Platform",
+    slug: "no-code-web-app-builder",
+    title: "No-code Web App Builder",
+    category: "Full-stack Platform",
     summary:
-      "A student-focused platform for exploring, saving, and managing campus events through a modern web experience.",
+      "A drag-and-drop web app builder with a publishing marketplace and multi-tenant architecture.",
     description:
-      "Created a centralized experience where students can browse upcoming events, review details, and interact with event categories in a way that feels intuitive on mobile and desktop.",
+      "Built a platform that allows users to create applications through visual interactions and publish them to a shared community marketplace.",
     challenge:
-      "The product needed to support many event types and user actions without overwhelming the interface or losing clarity on smaller screens.",
+      "Supporting multiple users and applications while keeping tenant data isolated and secure.",
     solution:
-      "I designed reusable category modules, calendar-aware card layouts, and service endpoints that keep event data structured and easy to extend.",
+      "Implemented a multi-tenant architecture with separated data contexts, combined with a React-based drag-and-drop interface and ASP.NET Core services.",
     outcome:
-      "The final product demonstrates user-centered frontends, responsive design discipline, and the ability to organize feature growth cleanly.",
-    stack: ["React", "Tailwind CSS", "C#", ".NET", "SQL Server"],
-    metrics: ["Mobile-first event browsing", "Scalable content structure", "Friendly onboarding flow"],
-    githubUrl: "https://github.com/your-username/campus-event-hub",
-    demoUrl: "https://campus-event-hub.vercel.app",
+      "Gained practical experience in system thinking, user-centric features, and market-oriented product development.",
+    stack: ["React", "ASP.NET Core", "MongoDB"],
+    metrics: ["Drag-and-drop builder", "Marketplace sharing", "Multi-tenant security"],
+    githubUrl: "https://github.com/quanqklasd123/NEXUS-403",
+    demoUrl: "https://github.com/quanqklasd123/NEXUS-403",
     accent: "from-amber-500/25 via-orange-500/20 to-rose-500/30"
-  },
-  {
-    slug: "focuslane-habit-tracker",
-    title: "FocusLane Habit Tracker",
-    category: "Productivity App",
-    summary:
-      "A lightweight personal productivity app for tracking streaks, goals, and weekly momentum.",
-    description:
-      "Developed a productivity-focused experience with clean progress indicators, lightweight interactions, and a visual system built to keep users motivated without clutter.",
-    challenge:
-      "Habit products can feel repetitive, so the challenge was designing interactions that stay motivating while still being simple and fast.",
-    solution:
-      "I used motion-driven feedback, structured goal cards, and lightweight persistence patterns to deliver a smooth experience with an approachable learning curve.",
-    outcome:
-      "This project shows how I think about retention-oriented UX, micro-interactions, and translating user behavior into product-friendly interfaces.",
-    stack: ["React", "TypeScript", "Tailwind CSS", "Firebase"],
-    metrics: ["Micro-interaction driven", "Retention-friendly UX", "Simple weekly insights"],
-    githubUrl: "https://github.com/your-username/focuslane-habit-tracker",
-    demoUrl: "https://focuslane.vercel.app",
-    accent: "from-fuchsia-500/25 via-violet-500/20 to-indigo-500/30"
   }
 ];
 
 export const timeline: TimelineItem[] = [
   {
     type: "Experience",
-    title: "Full-stack Developer Project Practice",
-    organization: "Self-directed + Academic Projects",
-    period: "2024 - Present",
+    title: "Project-based Software Development",
+    organization: "Academic + Personal Projects",
+    period: "2023 - Present",
     description:
-      "Built production-style portfolio, dashboard, and platform projects to strengthen end-to-end product thinking and internship readiness.",
+      "Delivered multiple real-world inspired projects across frontend and backend technologies to strengthen practical engineering skills.",
     highlights: [
-      "Translated UI concepts into responsive React applications",
-      "Designed backend services with Spring Boot, .NET, and Node.js",
-      "Practiced clean code structure, Git workflows, and reusable components"
-    ]
-  },
-  {
-    type: "Experience",
-    title: "Frontend Collaboration Contributor",
-    organization: "Student Team Projects",
-    period: "2023 - 2025",
-    description:
-      "Worked with teammates on delivering interfaces, aligning on GitHub workflows, and iterating quickly based on feedback.",
-    highlights: [
-      "Converted wireframes into shippable interface sections",
-      "Focused on visual consistency, spacing, and responsive behavior",
-      "Helped organize task ownership and component reuse"
+      "Built and maintained layered and multi-tenant architectures",
+      "Implemented responsive interfaces with React and modern CSS frameworks",
+      "Collaborated through Git workflows and project documentation"
     ]
   },
   {
     type: "Education",
-    title: "Software Engineering",
-    organization: "University Track",
-    period: "Expected Graduation 2027",
+    title: "Information Technology (Software Engineering)",
+    organization: "HUTECH University",
+    period: "2022 - 2026",
     description:
-      "Building a foundation in software engineering principles, data structures, web application development, and collaborative project delivery.",
+      "Final-year student with academic focus on software engineering fundamentals and web system development.",
     highlights: [
-      "Coursework supporting full-stack application development",
-      "Applied programming practice through academic and personal builds",
-      "Continuously improving technical communication in English"
+      "Major: Software Engineering",
+      "GPA: 3.0 / 4.0",
+      "Coursework and projects in frontend, backend, and database systems"
+    ]
+  },
+  {
+    type: "Experience",
+    title: "Certifications and Self-learning",
+    organization: "Cisco NetAcad + Self-study",
+    period: "2025",
+    description:
+      "Continually improved technical foundations through structured certificates and independent learning.",
+    highlights: [
+      "Networking Basics (Nov 2025)",
+      "JavaScript Essentials 1",
+      "JavaScript Essentials 2 (Dec 2025)"
     ]
   }
 ];
@@ -247,17 +227,12 @@ export const timeline: TimelineItem[] = [
 export const contactLinks: ContactLink[] = [
   {
     label: "Email",
-    value: "hello@minhanh.dev",
-    href: "mailto:hello@minhanh.dev"
+    value: "tvquan2004@gmail.com",
+    href: "mailto:tvquan2004@gmail.com"
   },
   {
     label: "GitHub",
-    value: "github.com/your-username",
-    href: "https://github.com/your-username"
-  },
-  {
-    label: "LinkedIn",
-    value: "linkedin.com/in/your-profile",
-    href: "https://linkedin.com/in/your-profile"
+    value: "github.com/quanqklasd123",
+    href: "https://github.com/quanqklasd123"
   }
 ];
