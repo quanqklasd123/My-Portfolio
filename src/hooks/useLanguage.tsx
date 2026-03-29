@@ -9,6 +9,9 @@ import {
 
 export type Language = "en" | "vi";
 
+const LANGUAGE_STORAGE_KEY = "portfolio-language";
+const LANGUAGE_SELECTED_STORAGE_KEY = "portfolio-language-selected";
+
 type LanguageContextValue = {
   language: Language;
   setLanguage: (language: Language) => void;
@@ -22,36 +25,55 @@ function getInitialLanguage(): Language {
     return "en";
   }
 
-  const storedLanguage = window.localStorage.getItem("portfolio-language");
+  const hasSelectedLanguage =
+    window.localStorage.getItem(LANGUAGE_SELECTED_STORAGE_KEY) === "true";
+
+  if (!hasSelectedLanguage) {
+    return "en";
+  }
+
+  const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
 
   if (storedLanguage === "en" || storedLanguage === "vi") {
     return storedLanguage;
   }
 
-  const browserLanguage = window.navigator.language.toLowerCase();
-  return browserLanguage.startsWith("vi") ? "vi" : "en";
+  return "en";
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>(getInitialLanguage);
+  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+
+  const setLanguage = (nextLanguage: Language) => {
+    setLanguageState(nextLanguage);
+    window.localStorage.setItem(LANGUAGE_SELECTED_STORAGE_KEY, "true");
+  };
+
+  const toggleLanguage = () => {
+    setLanguageState((current) => {
+      const nextLanguage = current === "en" ? "vi" : "en";
+      window.localStorage.setItem(LANGUAGE_SELECTED_STORAGE_KEY, "true");
+      return nextLanguage;
+    });
+  };
 
   useEffect(() => {
     if (typeof document !== "undefined") {
       document.documentElement.lang = language;
       document.title =
         language === "vi"
-          ? "Trần Văn Quân | Frontend Developer"
-          : "Tran Van Quan | Frontend Developer";
+          ? "Trần Văn Quân | Website Developer"
+          : "Tran Van Quan | Website Developer";
     }
 
-    window.localStorage.setItem("portfolio-language", language);
+    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
   }, [language]);
 
   const value = useMemo(
     () => ({
       language,
       setLanguage,
-      toggleLanguage: () => setLanguage((current) => (current === "en" ? "vi" : "en"))
+      toggleLanguage
     }),
     [language]
   );

@@ -39,7 +39,7 @@ export function HeroSection({ onNavigateSection }: { onNavigateSection: (section
                 <ArrowRight className="h-4 w-4" />
               </Button>
               <Button variant="secondary" size="lg" asChild>
-                <a href={`${baseUrl}tran-van-quan-cv.pdf`} download="Tran-Van-Quan-CV.pdf">
+                <a href={`${baseUrl}CV_TranVanQuan.pdf`} download="CV_TranVanQuan.pdf">
                   <Download className="h-4 w-4" />
                   {ui.downloadCv}
                 </a>

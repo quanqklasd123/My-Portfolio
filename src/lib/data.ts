@@ -60,18 +60,18 @@ export type ContactLink = {
 
 export const profile: Profile = {
   name: "Tran Van Quan",
-  role: "Frontend Developer",
+  role: "Website Developer",
   location: "Hiep Phu Ward, Thu Duc City",
   intro:
-    "Final-year Information Technology student building responsive web interfaces with practical project experience across modern frontend and backend ecosystems.",
+    "Fourth-year Information Technology student passionate about building intuitive, highly responsive web interfaces with hands-on full-stack project experience.",
   bio:
-    "I am a final-year IT student majoring in Software Engineering at HUTECH University. I enjoy building practical products with clean architecture and user-friendly interfaces, and I have hands-on project experience with React, TypeScript, Java Spring Boot, and ASP.NET Core.",
+    "I am a fourth-year IT student majoring in Software Engineering at HUTECH University. I focus on practical website development with clean architecture and user-centered interfaces, and I have project experience across React, TypeScript, Java Spring Boot, ASP.NET Core, and Laravel ecosystems.",
   goals:
-    "I am applying for a Frontend Developer role to work in a real-world environment, contribute to actual products, and continue improving my ability to design responsive UI and collaborate in complete web system delivery.",
+    "I am seeking a Website Developer role to apply my academic foundation in a real-world environment and deepen my expertise across the full website development and deployment lifecycle.",
   strengths: [
-    "Hands-on project delivery with reusable component architecture",
-    "Solid understanding of OOP, MVC, REST API, and CRUD principles",
-    "Strong adaptability with modern tools, AI-assisted workflows, and team collaboration"
+    "Hands-on delivery of responsive interfaces with reusable component architecture",
+    "Solid understanding of OOP, MVC, REST API, and CRUD with practical backend integration",
+    "Strong adaptability with Git workflows, CI/CD automation, and AI-assisted development"
   ]
 };
 
@@ -105,16 +105,18 @@ export const skillCategories: SkillCategory[] = [
     items: [
       { name: "Java Spring Boot", level: 77 },
       { name: "ASP.NET Core", level: 75 },
-      { name: "Node.js", level: 74 }
+      { name: "Node.js", level: 74 },
+      { name: "PHP (Laravel)", level: 72 }
     ]
   },
   {
     title: "Tools",
-    description: "Version control, editor workflow, and deployment automation tools.",
+    description: "Version control, editor workflow, data tools, and deployment automation.",
     items: [
       { name: "Git", level: 79 },
       { name: "GitHub", level: 78 },
-      { name: "GitHub Actions", level: 74 }
+      { name: "GitHub Actions", level: 74 },
+      { name: "MySQL / SQL Server", level: 73 }
     ]
   }
 ];
@@ -125,17 +127,17 @@ export const projects: Project[] = [
     title: "Personal Portfolio Website",
     category: "Frontend Project",
     summary:
-      "A bilingual (English/Vietnamese) portfolio with responsive design and smooth motion-driven user experience.",
+      "A digital portfolio website built to clearly present my background, technical skills, and selected projects to potential employers.",
     description:
-      "Developed a modern portfolio focused on clean UI architecture, reusable components, and practical product interactions.",
+      "Developed a modern portfolio with a highly responsive and easily navigable interface, using smooth animations to maintain a seamless experience across devices.",
     challenge:
-      "Building a scalable frontend structure that remains clean while supporting multiple sections, languages, and interaction flows.",
+      "Creating a professional personal-branding website that communicates technical strengths clearly while still feeling fast and intuitive on every screen size.",
     solution:
-      "Implemented reusable components, custom hooks, centralized content management, language switching, dark/light mode, and project detail routing.",
+      "Implemented a structured React + TypeScript architecture with reusable sections, polished motion design, and responsive layout patterns to keep the browsing experience clear and consistent.",
     outcome:
-      "Improved frontend architecture thinking and practical skills in building responsive, user-friendly product interfaces.",
+      "Effectively showcased my UI/UX preferences and strengthened my practical experience in crafting responsive frontend interfaces for real recruitment use.",
     stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    metrics: ["Bilingual UI", "Reusable architecture", "Responsive UX"],
+    metrics: ["Responsive multi-device UX", "Smooth UI animation", "Clear personal branding"],
     githubUrl: "https://github.com/quanqklasd123/My-Portfolio",
     demoUrl: "https://quanqklasd123.github.io/My-Portfolio/",
     accent: "from-emerald-500/25 via-teal-500/20 to-cyan-500/30"
@@ -145,17 +147,17 @@ export const projects: Project[] = [
     title: "Sole Mundo (Shoes Shop)",
     category: "E-commerce Project",
     summary:
-      "A layered-architecture e-commerce project focused on maintainability, role management, and practical database handling.",
+      "A full-featured online shoe retailer platform with product browsing, search filtering, cart management, and secure checkout.",
     description:
-      "Built an e-commerce system based on a real-world model with Java Spring Boot, MySQL, and Thymeleaf, emphasizing structure and scalability.",
+      "Built a practical commerce system with Java Spring Boot, MySQL, and Thymeleaf to deliver a straightforward customer shopping flow and reliable backend operations.",
     challenge:
-      "Ensuring the architecture remains easy to maintain and extend while handling user roles and core commerce flows.",
+      "Balancing user-friendly shopping interactions with backend reliability for product and order management in a scalable structure.",
     solution:
-      "Applied a layered design (Controller - Service - Repository), implemented role-based behaviors, and organized MySQL operations with clear data flow boundaries.",
+      "Implemented core commerce features including browsing, filtering, cart, and checkout with a layered architecture that separates business logic and data operations.",
     outcome:
-      "Strengthened understanding of system architecture, data handling, and scalability in backend-driven web applications.",
+      "Delivered a stable end-to-end shopping experience while reinforcing my backend architecture, data management, and maintainability mindset.",
     stack: ["Java Spring Boot", "MySQL", "Thymeleaf"],
-    metrics: ["Layered architecture", "Role management", "Scalable backend foundation"],
+    metrics: ["Product browsing + filtering", "Cart + secure checkout", "Order management foundation"],
     githubUrl: "https://github.com/quanqklasd123/Sole-Mundo",
     demoUrl: "https://github.com/quanqklasd123/Sole-Mundo",
     accent: "from-sky-500/25 via-blue-500/20 to-indigo-500/30"
@@ -165,17 +167,17 @@ export const projects: Project[] = [
     title: "No-code Web App Builder",
     category: "Full-stack Platform",
     summary:
-      "A drag-and-drop web app builder with a publishing marketplace and multi-tenant architecture.",
+      "A platform that lets users create custom applications through drag-and-drop components and publish them to a shared marketplace.",
     description:
-      "Built a platform that allows users to create applications through visual interactions and publish them to a shared community marketplace.",
+      "Engineered a no-code builder experience using React, ASP.NET Core, and MongoDB to support visual app construction and community publishing workflows.",
     challenge:
-      "Supporting multiple users and applications while keeping tenant data isolated and secure.",
+      "Designing a system that supports deep app personalization and multiple user-published products while preserving clean architecture and data safety.",
     solution:
-      "Implemented a multi-tenant architecture with separated data contexts, combined with a React-based drag-and-drop interface and ASP.NET Core services.",
+      "Combined a drag-and-drop frontend builder with backend services for storing, publishing, and managing generated apps in a marketplace-oriented workflow.",
     outcome:
-      "Gained practical experience in system thinking, user-centric features, and market-oriented product development.",
+      "Empowered users with flexible no-code creation while significantly improving my high-level architecture and system design capabilities.",
     stack: ["React", "ASP.NET Core", "MongoDB"],
-    metrics: ["Drag-and-drop builder", "Marketplace sharing", "Multi-tenant security"],
+    metrics: ["Drag-and-drop builder", "Marketplace publishing", "Advanced system design"],
     githubUrl: "https://github.com/quanqklasd123/NEXUS-403",
     demoUrl: "https://github.com/quanqklasd123/NEXUS-403",
     accent: "from-amber-500/25 via-orange-500/20 to-rose-500/30"

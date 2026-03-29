@@ -121,18 +121,18 @@ const viData: PortfolioData = {
   ],
   profile: {
     name: "Trần Văn Quân",
-    role: "Frontend Developer",
+    role: "Website Developer",
     location: "Phường Hiệp Phú, TP. Thủ Đức",
     intro:
-      "Mình là sinh viên năm cuối ngành Công nghệ Thông tin, tập trung xây dựng giao diện responsive với kinh nghiệm thực hành ở nhiều dự án công nghệ hiện đại.",
+      "Mình là sinh viên năm 4 ngành Công nghệ Thông tin, đam mê xây dựng website với giao diện trực quan, responsive cao và trải nghiệm người dùng mượt mà.",
     bio:
-      "Mình là sinh viên năm cuối chuyên ngành Kỹ thuật Phần mềm tại HUTECH. Mình thích xây dựng sản phẩm thực tế với kiến trúc rõ ràng và giao diện thân thiện, đồng thời đã có kinh nghiệm dự án với React, TypeScript, Java Spring Boot và ASP.NET Core.",
+      "Mình là sinh viên năm 4 chuyên ngành Kỹ thuật Phần mềm tại HUTECH. Mình tập trung phát triển website theo định hướng thực tiễn với kiến trúc rõ ràng và giao diện thân thiện, đồng thời đã có kinh nghiệm dự án với React, TypeScript, Java Spring Boot, ASP.NET Core và Laravel.",
     goals:
-      "Mình đang ứng tuyển vị trí Frontend Developer để làm việc trong môi trường thực tế, đóng góp vào sản phẩm thật và tiếp tục nâng cao năng lực xây dựng giao diện responsive cũng như phối hợp trong quy trình phát triển hệ thống web hoàn chỉnh.",
+      "Mình đang ứng tuyển vị trí Website Developer để áp dụng nền tảng đã học vào môi trường thực tế và tiếp tục nâng cao năng lực trên toàn bộ vòng đời phát triển và triển khai website.",
     strengths: [
-      "Kinh nghiệm triển khai dự án với kiến trúc component tái sử dụng",
-      "Nắm chắc OOP, MVC, REST API và CRUD",
-      "Thích nghi nhanh với công cụ mới và quy trình làm việc nhóm"
+      "Kinh nghiệm triển khai giao diện responsive với kiến trúc component tái sử dụng",
+      "Nắm chắc OOP, MVC, REST API, CRUD và tích hợp backend thực tiễn",
+      "Thích nghi nhanh với Git workflow, CI/CD và công cụ AI hỗ trợ phát triển"
     ]
   },
   heroStats: [
@@ -156,16 +156,18 @@ const viData: PortfolioData = {
       items: [
         { name: "Java Spring Boot", level: 77 },
         { name: "ASP.NET Core", level: 75 },
-        { name: "Node.js", level: 74 }
+        { name: "Node.js", level: 74 },
+        { name: "PHP (Laravel)", level: 72 }
       ]
     },
     {
       title: "Công cụ",
-      description: "Công cụ quản lý mã nguồn và tự động hóa quy trình phát hành.",
+      description: "Công cụ quản lý mã nguồn, dữ liệu và tự động hóa quy trình phát hành.",
       items: [
         { name: "Git", level: 79 },
         { name: "GitHub", level: 78 },
-        { name: "GitHub Actions", level: 74 }
+        { name: "GitHub Actions", level: 74 },
+        { name: "MySQL / SQL Server", level: 73 }
       ]
     }
   ],
@@ -175,17 +177,17 @@ const viData: PortfolioData = {
       title: "Personal Portfolio Website",
       category: "Dự án Frontend",
       summary:
-        "Website portfolio song ngữ Anh/Việt với thiết kế responsive và trải nghiệm mượt.",
+        "Website portfolio cá nhân được xây dựng để trình bày rõ ràng hồ sơ, kỹ năng kỹ thuật và các dự án tiêu biểu tới nhà tuyển dụng.",
       description:
-        "Phát triển portfolio hiện đại tập trung vào kiến trúc giao diện sạch, component tái sử dụng và các tương tác thực tế.",
+        "Phát triển portfolio hiện đại với giao diện responsive cao, dễ điều hướng và hiệu ứng chuyển động mượt để đảm bảo trải nghiệm xuyên suốt trên nhiều thiết bị.",
       challenge:
-        "Thiết kế cấu trúc frontend có thể mở rộng mà vẫn dễ bảo trì khi có nhiều section, nhiều ngôn ngữ và nhiều luồng tương tác.",
+        "Xây dựng một website thương hiệu cá nhân thể hiện rõ năng lực kỹ thuật nhưng vẫn giữ trải nghiệm trực quan, nhanh và nhất quán trên mọi kích thước màn hình.",
       solution:
-        "Triển khai component tái sử dụng, custom hooks, quản lý nội dung tập trung, chuyển ngôn ngữ, dark/light mode và route chi tiết dự án.",
+        "Triển khai kiến trúc React + TypeScript có tổ chức, tái sử dụng section, kết hợp animation mượt và bố cục responsive để tối ưu trải nghiệm duyệt nội dung.",
       outcome:
-        "Giúp mình nâng cao tư duy kiến trúc frontend và khả năng xây dựng giao diện responsive thân thiện với người dùng.",
+        "Giúp mình thể hiện rõ định hướng UI/UX cá nhân và nâng cao năng lực xây dựng giao diện frontend responsive phục vụ mục tiêu ứng tuyển thực tế.",
       stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      metrics: ["Giao diện song ngữ", "Kiến trúc tái sử dụng", "UX responsive"],
+      metrics: ["UX responsive đa thiết bị", "Animation mượt", "Truyền tải thương hiệu cá nhân"],
       githubUrl: "https://github.com/quanqklasd123/My-Portfolio",
       demoUrl: "https://quanqklasd123.github.io/My-Portfolio/",
       accent: "from-emerald-500/25 via-teal-500/20 to-cyan-500/30"
@@ -195,17 +197,17 @@ const viData: PortfolioData = {
       title: "Sole Mundo (Shoes Shop)",
       category: "Dự án Thương mại điện tử",
       summary:
-        "Dự án e-commerce theo kiến trúc phân lớp, tập trung vào khả năng bảo trì và mở rộng hệ thống.",
+        "Nền tảng bán giày trực tuyến với đầy đủ chức năng duyệt sản phẩm, lọc tìm kiếm, quản lý giỏ hàng và thanh toán an toàn.",
       description:
-        "Xây dựng hệ thống bán giày dựa trên mô hình thực tế với Java Spring Boot, MySQL và Thymeleaf, chú trọng cấu trúc và tính mở rộng.",
+        "Xây dựng hệ thống thương mại điện tử thực tiễn bằng Java Spring Boot, MySQL và Thymeleaf nhằm mang lại trải nghiệm mua sắm rõ ràng cho người dùng và vận hành backend ổn định.",
       challenge:
-        "Đảm bảo kiến trúc hệ thống dễ bảo trì và mở rộng trong khi vẫn xử lý tốt phân quyền người dùng và luồng nghiệp vụ cốt lõi.",
+        "Cân bằng giữa trải nghiệm mua sắm thân thiện cho khách hàng và độ tin cậy của hệ thống backend trong quản lý sản phẩm và đơn hàng.",
       solution:
-        "Áp dụng mô hình Controller - Service - Repository, triển khai phân quyền cơ bản và tổ chức dữ liệu MySQL theo luồng xử lý rõ ràng.",
+        "Triển khai các luồng nghiệp vụ cốt lõi như duyệt sản phẩm, lọc tìm kiếm, giỏ hàng và thanh toán trên kiến trúc phân lớp tách biệt rõ business logic và data layer.",
       outcome:
-        "Giúp mình củng cố tư duy kiến trúc hệ thống, quản lý dữ liệu và khả năng mở rộng cho ứng dụng web backend-centric.",
+        "Hoàn thiện trải nghiệm mua sắm end-to-end và củng cố tư duy kiến trúc backend, quản lý dữ liệu cũng như khả năng bảo trì hệ thống.",
       stack: ["Java Spring Boot", "MySQL", "Thymeleaf"],
-      metrics: ["Kiến trúc phân lớp", "Quản lý vai trò", "Nền tảng backend mở rộng"],
+      metrics: ["Duyệt + lọc sản phẩm", "Giỏ hàng + thanh toán an toàn", "Nền tảng quản lý đơn hàng"],
       githubUrl: "https://github.com/quanqklasd123/Sole-Mundo",
       demoUrl: "https://github.com/quanqklasd123/Sole-Mundo",
       accent: "from-sky-500/25 via-blue-500/20 to-indigo-500/30"
@@ -215,17 +217,17 @@ const viData: PortfolioData = {
       title: "No-code Web App Builder",
       category: "Nền tảng Full-stack",
       summary:
-        "Nền tảng tạo web app kéo-thả, có marketplace chia sẻ sản phẩm và kiến trúc multi-tenant.",
+        "Nền tảng cho phép người dùng xây dựng ứng dụng tùy chỉnh bằng thao tác kéo-thả và xuất bản lên marketplace cộng đồng.",
       description:
-        "Xây dựng nền tảng cho phép người dùng tạo ứng dụng bằng thao tác trực quan và xuất bản lên marketplace cộng đồng.",
+        "Phát triển trải nghiệm no-code bằng React, ASP.NET Core và MongoDB để hỗ trợ quá trình tạo ứng dụng trực quan và chia sẻ sản phẩm trong cộng đồng.",
       challenge:
-        "Đảm bảo tách biệt dữ liệu giữa nhiều tenant để tăng bảo mật khi nhiều người dùng cùng vận hành trên một hệ thống.",
+        "Thiết kế hệ thống hỗ trợ mức độ tùy biến ứng dụng cao và nhiều sản phẩm do người dùng xuất bản, đồng thời vẫn giữ kiến trúc sạch và dữ liệu an toàn.",
       solution:
-        "Kết hợp giao diện drag-and-drop bằng React với dịch vụ ASP.NET Core và triển khai mô hình multi-tenant để tách dữ liệu theo tenant.",
+        "Kết hợp trình dựng kéo-thả ở frontend với các dịch vụ backend để lưu trữ, xuất bản và quản lý ứng dụng theo luồng vận hành hướng marketplace.",
       outcome:
-        "Giúp mình hiểu sâu hơn về nhu cầu người dùng, tư duy sản phẩm và kiến trúc hệ thống theo định hướng thị trường.",
+        "Trao cho người dùng khả năng tự xây dựng ứng dụng linh hoạt, đồng thời giúp mình tiến bộ rõ rệt về tư duy kiến trúc tổng thể và thiết kế hệ thống.",
       stack: ["React", "ASP.NET Core", "MongoDB"],
-      metrics: ["Trình dựng kéo-thả", "Marketplace cộng đồng", "Bảo mật multi-tenant"],
+      metrics: ["Trình dựng kéo-thả", "Xuất bản marketplace", "Nâng cao tư duy hệ thống"],
       githubUrl: "https://github.com/quanqklasd123/NEXUS-403",
       demoUrl: "https://github.com/quanqklasd123/NEXUS-403",
       accent: "from-amber-500/25 via-orange-500/20 to-rose-500/30"
@@ -293,7 +295,7 @@ const uiTextMap: Record<Language, UiText> = {
     languageButtonAria: "Toggle language",
     letsTalk: "Let's Talk",
     toggleNavigationAria: "Toggle navigation",
-    heroAvailability: "Open to Frontend Developer opportunities",
+    heroAvailability: "Open to Website Developer opportunities",
     heroTitleBefore: "Building modern products with",
     heroTitleHighlight: "frontend polish",
     heroTitleAfter: "and backend clarity.",
@@ -309,7 +311,7 @@ const uiTextMap: Record<Language, UiText> = {
       "Portfolio-ready projects for international company applications"
     ],
     heroInternshipNote:
-      "Open to frontend roles where I can contribute to real products, collaborate with teams, and keep improving engineering quality.",
+      "Open to website development roles where I can contribute to real products, collaborate with teams, and keep improving engineering quality.",
     aboutEyebrow: "About Me",
     aboutTitle: "A full-stack foundation shaped by product thinking",
     aboutDescription:
@@ -389,7 +391,7 @@ const uiTextMap: Record<Language, UiText> = {
     languageButtonAria: "Chuyển ngôn ngữ",
     letsTalk: "Trao Đổi",
     toggleNavigationAria: "Mở đóng menu điều hướng",
-    heroAvailability: "Sẵn sàng cho các cơ hội Frontend Developer",
+    heroAvailability: "Sẵn sàng cho các cơ hội Website Developer",
     heroTitleBefore: "Xây dựng sản phẩm hiện đại với",
     heroTitleHighlight: "giao diện chỉn chu",
     heroTitleAfter: "và backend rõ ràng.",
@@ -405,7 +407,7 @@ const uiTextMap: Record<Language, UiText> = {
       "Dự án sẵn sàng cho hồ sơ ứng tuyển công ty quốc tế"
     ],
     heroInternshipNote:
-      "Sẵn sàng cho các vị trí frontend nơi mình có thể đóng góp cho sản phẩm thực tế và tiếp tục nâng cao chất lượng kỹ thuật.",
+      "Sẵn sàng cho các vị trí website development nơi mình có thể đóng góp cho sản phẩm thực tế và tiếp tục nâng cao chất lượng kỹ thuật.",
     aboutEyebrow: "Giới Thiệu",
     aboutTitle: "Nền tảng full-stack được định hình bởi tư duy sản phẩm",
     aboutDescription:

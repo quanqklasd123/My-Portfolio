@@ -4,15 +4,18 @@ export function useActiveSection(sectionIds: string[]) {
   const [activeSection, setActiveSection] = useState(sectionIds[0] ?? "about");
 
   useEffect(() => {
-    const sections = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter((element): element is HTMLElement => Boolean(element));
-
-    if (!sections.length) {
-      return undefined;
-    }
+    const getSections = () =>
+      sectionIds
+        .map((id) => document.getElementById(id))
+        .filter((element): element is HTMLElement => Boolean(element));
 
     const updateActiveSection = () => {
+      const sections = getSections();
+
+      if (!sections.length) {
+        return;
+      }
+
       const viewportHeight = window.innerHeight;
       const headerOffset = 112;
       let nextActive = sections[0]?.id ?? "about";
